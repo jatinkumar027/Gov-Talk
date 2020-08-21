@@ -1,0 +1,78 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	   background-color: rgba(189, 212, 231,0.2);
+}
+
+h1{
+	text-align: center;
+	margin-top: 20px;
+}
+i{
+	margin:20px 0 10px 0;
+	margin-left: 40%;
+	font-size: 60px;
+}
+
+.Register{
+	background-color: rgba(15,15,88,0.1);
+	border-radius: 5px;
+	width: 30%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-left: 35%;
+	margin-top: 2%;
+}
+#Register{
+	display:flex;
+	flex-direction: column;
+	justify-content: center;	
+}
+
+input{
+	width: 95%;
+	border:none;
+	border-bottom: 1px solid #000;
+	margin: 4px 0 ;
+	font-size: 15px;
+	padding: 1%;
+	margin-left: 3px;
+	background: none;
+	color: #000;
+
+}
+input:focus{ 
+	border-bottom: 1px solid #1e90ff;
+}
+.radio-buttons{
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+input[type="radio"]{
+	width: 12%;
+	padding: 0;
+	margin: 8px 0;	
+}
+label{
+	margin: 8px 30px 8px 0;	
+}
+input[type="submit"]{
+	padding: 15px 40px;
+	width: 98%;
+	background: #1a8000;
+	color:#fff;
+	border:none;
+	margin-left: 20px 0;
+	border-radius: 3px;
+	cursor: pointer;
+
+}
+input[type="submit"]:hover{
+	color: #000;
+	background: #fff;
+	border:1px solid #150;
+}

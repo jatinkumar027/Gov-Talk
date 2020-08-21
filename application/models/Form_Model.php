@@ -2,9 +2,9 @@
 class Form_Model extends CI_Model {
 
 	/* this function will record in database*/
-    public function create($formarray)
+    public function create($regarray)
 	{
-		$this->db->insert('user',$formarray);
+		$this->db->insert('user',$regarray);
 	}
 	public function checkuser($formarray){
 		$this->db->where($formarray);
