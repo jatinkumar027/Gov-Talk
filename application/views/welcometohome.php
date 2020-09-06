@@ -3,9 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>Welcome to Your Home</title>
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url().'assets/css/welcome.css'?>">
   </head>
   <body>
-    <h1>Welcome <?php echo "Ms. Pragya";?></h1>
+  <?php $name = $this->session->userdata('username'); ?>
+    <h1>Welcome <?php echo $name;?> </h1>
     <p>
     <?php
     $msg = $this->session->flashdata('msg');
@@ -14,5 +16,6 @@
           echo $msg;
     }
     ?></p>
+    
   </body>
 </html>
