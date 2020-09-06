@@ -19,9 +19,10 @@ class Home extends CI_Controller {
 				$formarray['password']=hash('sha512',$this->input->post('password'));
 
 				$check=$this->Form_Model->checkuser($formarray);
-				if($check!='')
+				if($check!='1')
 				{
-				$this->session->set_flashdata('msg','User successfully logged in');
+				$this->session->set_userdata('username', $check);
+				$this->session->set_flashdata('msg','You are successfully logged in');
 				redirect(base_url().'index.php/Home/welcome');
 		} else{
 				$this->session->set_flashdata('error','Either Email Address or Password is incorrect or User not registered');

@@ -31,8 +31,16 @@ input{
 	width: 66%;
 	margin: 10px 20px 10px 20px;
 	font-size: 18px;
+  border:none;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
 	border:1px solid #000;
 	padding: 10px 55px;
+}
+input:focus{
+  outline: none;
 }
 input[type="submit"]{
 	padding: 15px 35px;
@@ -70,7 +78,7 @@ a:hover{
 .cust{
 	position: absolute;
 	background: #fff;
-	padding: 4px;
+	padding: 3px;
 	margin-left: 20px;
 	margin-top: 10.5px;
 	border:1px solid #fff;
@@ -79,7 +87,7 @@ a:hover{
 
 .cust2{
   position: absolute;
-  margin-left: -423px;
+  margin-left: -424px;
   margin-top: 10px;
   padding: 0;
   z-index: 1;
