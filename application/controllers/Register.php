@@ -35,6 +35,7 @@ class Register extends CI_Controller {
         $regarray['gender']=$this->input->post('gender');
 
         $this->Form_Model->create($regarray);
+				$this->session->set_userdata('username', $this->input->post('name'));
         $this->session->set_flashdata('msg','Your account has been registered successfully.');
         redirect(base_url().'index.php/Register/welcome');
 		}

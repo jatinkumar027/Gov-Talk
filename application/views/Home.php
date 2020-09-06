@@ -8,24 +8,28 @@
 </head>
 <body>
 	<h1>Login your Account</h1>
-	<p>
+	<span class="top-error-msg">
 	<?php
 	$error = $this->session->flashdata('error');
 	if($error != '')
 	{
 				echo $error;
 	}
-	?></p>
+	?></span>
 	<div class="container">
 	<img src="<?php echo base_url().'assets/img/home-user-icon.png'?>" alt="image1">
 	<form method="post">
 		<div class="form-input">
 			<i class="fa fa-envelope fa-2x cust" aria-hidden="true"></i>
 			<input type="email" name="email" placeholder="Enter Email">
-			<p><?php echo form_error('email'); ?></p>
-			<i class="fa fa-lock fa-3x cust2" aria-hidden="true"></i>
+			<div class="arrow-up">
+			</div>
+			<?php echo form_error('email'); ?>
 			<input type="password" name="password" placeholder="Enter password">
-			<p><?php echo form_error('password'); ?></p>
+			<i class="fa fa-lock fa-3x cust2" aria-hidden="true"></i></input>
+			<div class="arrow-up">
+			</div>
+			<?php echo form_error('password'); ?>
 			<a href ="#">Forgot password?</a>
 			<input type="submit" name="submit" value="Log in">
 			<div class="inline-register">
