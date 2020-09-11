@@ -15,5 +15,13 @@ class Form_Model extends CI_Model {
   }
   return 1;
 	}
+public function retrieve()
+{
+$query = $this->db->get('user');
+foreach ($query->result() as $row)
+{
+    echo $row->phone;
+}
+}
 }
 ?>
