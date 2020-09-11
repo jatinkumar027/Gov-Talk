@@ -10,23 +10,23 @@
 	<div class="Register">
 		<i class="fa fa-user-circle-o fa-4x"></i>
 		<form method="post" id="register">
-			<input type="text" name="name" placeholder="Enter your Full Name">
+			<input type="text" name="name" placeholder="Enter your Full Name" value="<?php echo set_value('name'); ?>">
 			<p><?php echo form_error('name'); ?></p>
-			<input type="Number" name="phone" id="Number" placeholder="Enter Phone Number">
+			<input type="Number" name="phone" id="Number" placeholder="Enter Phone Number"  value="<?php echo set_value('phone'); ?>">
 			<p><?php echo form_error('phone'); ?></p>
-			<input type="email" name="email" id="name" placeholder="Enter Email">
+			<input type="email" name="email" id="name" placeholder="Enter Email" value="<?php echo set_value('email'); ?>">
 			<p><?php echo form_error('email'); ?></p>
-			<input type="password" name="password" value="" placeholder="Enter password">
+			<input type="password" name="password" value="" placeholder="Enter password" value="<?php echo set_value('password'); ?>">
 			<p><?php echo form_error('password'); ?></p>
-			<input type="password" name="repassword" value="" placeholder="Re-enter your password">
+			<input type="password" name="repassword" value="" placeholder="Re-enter your password" value="<?php echo set_value('repassword'); ?>">
 			<p><?php echo form_error('repassword'); ?></p>
-			<input type="text" name="address" placeholder="Enter Address">
+			<input type="text" name="address" placeholder="Enter Address" value="<?php echo set_value('address'); ?>">
 			<p><?php echo form_error('address'); ?></p>
-			<input type="Pincode" name="pincode" placeholder="Enter Pincode">
+			<input type="Pincode" name="pincode" placeholder="Enter Pincode" value="<?php echo set_value('pincode'); ?>">
 			<p><?php echo form_error('pincode'); ?></p>
-			<input type="City" name="city" placeholder="Enter City/Town">
+			<input type="City" name="city" placeholder="Enter City/Town" value="<?php echo set_value('city'); ?>">
 			<p><?php echo form_error('city'); ?></p>
-			<input type="State" name="state" placeholder="Enter State">
+			<input type="State" name="state" placeholder="Enter State" value="<?php echo set_value('state'); ?>">
 			<p><?php echo form_error('state'); ?></p>
 			<div class="radio-buttons">
 			  <input type="radio" name="gender" id="male" value="male" checked><label for="male">Male</label>

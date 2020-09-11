@@ -27,11 +27,4 @@ class Welcome extends CI_Controller {
 		$this->load->view('welcome_message');
 	}
 	
-	public function show()
-	{
-	  $this->load->model('Form_Model');
-	  $ret=$this->Form_Model retrieve();
-	}
-
-	
 }

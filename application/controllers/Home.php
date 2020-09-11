@@ -21,7 +21,8 @@ class Home extends CI_Controller {
 				$check=$this->Form_Model->checkuser($formarray);
 				if($check!='1')
 				{
-				$this->session->set_userdata('username', $check);
+				$this->load->helper('cookie');
+				set_cookie('username',$check,'3600');
 				$this->session->set_flashdata('msg','You are successfully logged in');
 				redirect(base_url().'index.php/Home/welcome');
 		} else{
@@ -33,5 +34,7 @@ class Home extends CI_Controller {
 
 	public function welcome(){
 		$this->load->view('welcometohome');
+		$this->load->model('Form_Model');
+	    $this->Form_Model->retrieve();
 	}
 }
