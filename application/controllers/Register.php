@@ -37,12 +37,8 @@ class Register extends CI_Controller {
         $this->Form_Model->create($regarray);
 				$this->session->set_userdata('username', $this->input->post('name'));
         $this->session->set_flashdata('msg','Your account has been registered successfully. We will get back to you soon .');
-        redirect(base_url().'index.php/Register/thankyou');
+        redirect(base_url().'index.php/Home/loginform');
 		}
 	}
-
- public function thankyou(){
-    $this->load->view('thankyou');
-  }
 
 }

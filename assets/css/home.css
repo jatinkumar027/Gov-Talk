@@ -15,7 +15,7 @@ h1{
   margin-right: auto;
 	background: rgba(15,15,88,0.7);
 	border-radius: 15px;
-justify-content: center;
+  justify-content: center;
 	align-content: center;
            }
 .container img{
@@ -79,8 +79,8 @@ a:hover{
 	position: absolute;
 	background: #fff;
 	padding: 3px;
-	margin-left: 20px;
-	margin-top: 10.5px;
+	margin-left: 21px;
+	margin-top: 11px;
 	border:1px solid #fff;
 
 }
@@ -107,6 +107,12 @@ p{
 .top-error-msg{
   font-size: 15px;
 	color:  red;
+	display: flex;
+  justify-content: center;
+}
+.top-success-msg{
+  font-size: 15px;
+	color:  green;
 	display: flex;
   justify-content: center;
 }

@@ -6,6 +6,7 @@ class Form_Model extends CI_Model {
 	{
 		$this->db->insert('user',$regarray);
 	}
+
 	public function checkuser($formarray){
 	$this->db->where($formarray);
 	$row = $this->db->get('user')->row_array();
@@ -15,13 +16,12 @@ class Form_Model extends CI_Model {
   }
   return 1;
 	}
+
 public function retrieve()
 {
 $query = $this->db->get('user');
-foreach ($query->result() as $row)
-{
-    echo $row->phone;
+return $query->result(); 
 }
-}
+
 }
 ?>
