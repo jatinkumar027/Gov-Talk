@@ -12,7 +12,10 @@ class Form_Model extends CI_Model {
 	$row = $this->db->get('user')->row_array();
   if($row!='')
   {
-  return $row['name'];
+    $checkuserarr = array();
+    $checkuserarr['status']=$row['status'];
+    $checkuserarr['name']=$row['name'];
+    return $checkuserarr;
   }
   return 1;
 	}
@@ -20,8 +23,7 @@ class Form_Model extends CI_Model {
 public function retrieve()
 {
 $query = $this->db->get('user');
-return $query->result(); 
+return $query->result();
 }
-
 }
 ?>

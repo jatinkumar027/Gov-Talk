@@ -29,13 +29,20 @@ class Home extends CI_Controller {
 				$check=$this->Form_Model->checkuser($formarray);
 				if($check!='1')
 				{
-				$this->load->helper('cookie');
-				set_cookie('username',$check,'3600');
-				$this->session->set_flashdata('msg','You are successfully logged in');
-				redirect(base_url().'index.php/user_listing/showall');
-		} else{
-				$this->session->set_flashdata('error','Either Email Address or Password is incorrect or User not registered');
-				redirect(base_url().'index.php/Home/loginform');
+					if($check['status']=='0')
+					{
+						$this->session->set_flashdata('error','Your Account is Inactive. Kindly wait for some time.');
+						redirect(base_url().'index.php/Home/loginform');
+					}
+					else{
+					$this->load->helper('cookie');
+					set_cookie('username',$check['name'],'3600');
+					$this->session->set_flashdata('msg','You are successfully logged in');
+					redirect(base_url().'index.php/user_listing/showall');
+					}
+			 }else{
+					$this->session->set_flashdata('error','Either Email Address or Password is incorrect or User not registered');
+					redirect(base_url().'index.php/Home/loginform');
 			}
 		}
 	}

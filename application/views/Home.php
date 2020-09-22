@@ -16,6 +16,15 @@
 				echo $error;
 	}
 	?></span>
+	<span class="top-success-msg">
+	<?php
+	$success = $this->session->flashdata('successmsg');
+	if($success != '')
+	{
+				echo $success;
+	}
+	?></span>
+
 	<div class="container">
 	<img src="<?php echo base_url().'assets/img/home-user-icon.png'?>" alt="image1">
 	<form method="post">
